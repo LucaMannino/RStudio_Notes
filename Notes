@@ -1,0 +1,32 @@
+control_data <- data.frame(control_data, row.names = `PT ID`)
+library(missMDA)
+nb <- estim_ncpPCA(control_data[,3:20], scale = "TRUE")
+comp <- imputePCA(control_data[,3:20], ncp=1, scale = "TRUE")
+library(ggplot2)
+library(FactoMineR)
+
+res.pca <- PCA(comp$completeObs)
+mi <- MIPCA(control_data[,3:20], ncp=1, scale = "TRUE")
+plot(mi)
+
+write.table(DataToExport, file = "ExportedFileName.csv", sep=",")
+
+myPr  <-prcomp(iris[,1:5], scale ="FALSE")
+myPr$x
+iris2 <- cbind(iris,myPr$x[,1:5])
+ggplot(iris2, aes(PC1,PC2, col = Status, fill = Status)) + stat_ellipse(geom="polygon", col ="black", alpha = 0.5) + geom_point(shape = 21, col = "black")
+
+
+
+df[nrow(df) + 1,] = c("v1","v2")
+
+existingDF = rbind(existingDF,newrow)bi
+
+rbind.data.frame
+
+
+No_PhosphoPr  <-prcomp(No_Phospho_PCA[,5:6])
+
+
+black white plus equations:
+ggplot(Nottingham_Algorithm_Other, aes(PC1,PC2 ))+ stat_function(fun = function(x) {0.4286*x +165}, col = "black") + stat_function(fun = function(x) {0.4286*x +65}, col = "gray50") +    stat_function(fun = function(x) {0.4286*x +40}, col = "gray65") + stat_function(fun = function(x) {0.4286*x -30}, col = "gray80")+geom_point(shape = Shape)
