@@ -35,3 +35,16 @@ ggplot(Nottingham_Algorithm_Other, aes(PC1,PC2 ))+ stat_function(fun = function(
 Script for linear regression in Rstudio
 
 model fit <- lm(cs~Secondvariable, data = dataname)
+
+
+reg1 <- lm(write~read,data=hsb2) 
+	summary(reg1)
+	
+	with(hsb2,plot(read, write))
+	abline(reg1)
+  
+ cor.test(x,y)
+
+
+
+
